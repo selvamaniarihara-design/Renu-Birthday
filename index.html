@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5b173b">
+  <title>For Renuu — A Secret Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div id="sparkles"></div>
+
+  <main>
+    <section id="lockScreen" class="screen active">
+      <div class="luxury-frame">
+        <div class="lock-icon">✦</div>
+        <p class="eyebrow">A PRIVATE LITTLE WORLD</p>
+        <h1>A Secret<br><span>for Renuu</span></h1>
+        <p class="subtitle">This surprise is locked exclusively for you.</p>
+
+        <div class="code-box">
+          <label for="secretCode">ENTER SECRET CODE</label>
+          <input id="secretCode" inputmode="numeric" maxlength="8" autocomplete="off" placeholder="••••" />
+          <button id="unlockBtn">UNLOCK THE SURPRISE <span>→</span></button>
+          <p id="errorText" class="error"></p>
+          <small>Hint: your birthday ✦</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="mainSite" class="hidden">
+      <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-copy">
+          <p class="eyebrow reveal">A MOMENT MADE JUST FOR YOU</p>
+          <h2 class="birthday-title reveal"><span>HAPPY BIRTHDAY</span><strong>RENUU</strong></h2>
+          <p class="hero-note reveal">Some people deserve more than a message.<br>They deserve a whole little world.</p>
+          <button class="gold-btn reveal" id="beginBtn">BEGIN THE SURPRISE ✦</button>
+        </div>
+        <div class="hero-photo-wrap">
+          <img src="assets/images/renu1.png" alt="Birthday portrait">
+        </div>
+      </header>
+
+      <section class="section intro-section" id="journey">
+        <p class="eyebrow">THE JOURNEY BEGINS</p>
+        <h3>One surprise at a time.</h3>
+        <p class="section-text">Take your time. There are a few little things waiting for you.</p>
+
+        <div class="countdown-card">
+          <div><span id="days">00</span><small>DAYS</small></div>
+          <div><span id="hours">00</span><small>HOURS</small></div>
+          <div><span id="minutes">00</span><small>MINUTES</small></div>
+          <div><span id="seconds">00</span><small>SECONDS</small></div>
+        </div>
+      </section>
+
+      <section class="section gallery-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A FEW FRAMES</p>
+            <h3>Renuu, in little moments.</h3>
+          </div>
+          <span class="gold-line"></span>
+        </div>
+        <div class="gallery">
+          <figure class="photo-card tall"><img src="assets/images/renu1.png" alt="Renuu portrait"></figure>
+          <figure class="photo-card"><img src="assets/images/renu2.jpg" alt="Renuu outdoors"></figure>
+          <figure class="photo-card"><img src="assets/images/renu3.jpg" alt="Renuu writing"></figure>
+          <figure class="photo-card tall"><img src="assets/images/renu4.png" alt="Renuu outdoors"></figure>
+          <figure class="photo-card"><img src="assets/images/renu5.jpg" alt="Renuu in a garden"></figure>
+          <figure class="photo-card"><img src="assets/images/renu6.jpg" alt="Renuu portrait"></figure>
+          <figure class="photo-card"><img src="assets/images/renu7.jpg" alt="Renuu at the beach"></figure>
+          <figure class="photo-card tall"><img src="assets/images/renu8.jpg" alt="Renuu portrait"></figure>
+        </div>
+      </section>
+
+      <section class="section gifts-section">
+        <p class="eyebrow">OPEN SLOWLY</p>
+        <h3>Three little secrets.</h3>
+        <div class="gift-grid">
+          <button class="gift" data-message="For every smile you have shared, I hope today gives one back to you. ✦"><span>01</span><b>THE SMILE</b><small>Open me</small></button>
+          <button class="gift" data-message="A beautiful memory doesn't need a perfect moment. Sometimes, it is simply a moment you want to keep."><span>02</span><b>THE MEMORY</b><small>Open me</small></button>
+          <button class="gift" data-message="And this one is simple: may this new year of your life be softer, brighter and full of beautiful surprises."><span>03</span><b>THE WISH</b><small>Open me</small></button>
+        </div>
+        <div id="giftReveal" class="gift-reveal hidden"></div>
+      </section>
+
+      <section class="section cake-section">
+        <div class="cake-wrap">
+          <p class="eyebrow">ONE LAST LITTLE THING</p>
+          <h3>Make a wish, Renuu.</h3>
+          <div class="cake" id="cake">
+            <div class="flame"></div>
+            <div class="candle"></div>
+            <div class="cake-top"></div>
+            <div class="cake-body"></div>
+            <div class="plate"></div>
+          </div>
+          <button class="gold-btn" id="wishBtn">MAKE THE WISH ✦</button>
+          <p id="wishText" class="wish-text"></p>
+        </div>
+      </section>
+
+      <section class="final-section">
+        <div class="final-inner">
+          <p class="eyebrow">ONE LAST THING...</p>
+          <h3>Happy Birthday,<br><span>Renuu.</span></h3>
+          <p class="final-message">
+            Today is your day. I hope this little surprise reminds you that you are
+            worth celebrating, worth smiling for, and worth every beautiful moment
+            that comes your way.
+          </p>
+          <div class="signature">— made with care ✦</div>
+          <div class="final-photo"><img src="assets/images/renu8.jpg" alt="Renuu"></div>
+          <p class="closing">May your next chapter be your most beautiful one yet.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <button id="closeModal" class="close">×</button>
+      <p class="eyebrow">A LITTLE SECRET</p>
+      <p id="modalMessage"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
